@@ -7,7 +7,7 @@ Requirements to be implemented:
 - user feedback for when something goes wrong
 
 Personal stretch goals:
-- to create a function that translates visial representation of morse code into audio
+- to create a function that translates the string of morse code into audio
 - successfully implement MVP with React!
 - mobile and large screen responsiveness 
 - start implementing good accessability practices 
