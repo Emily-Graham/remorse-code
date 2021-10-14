@@ -9,15 +9,20 @@ const Translator = () => {
   const [textState, setTextState] = useState("");
   const [output, setOutput] = useState("");
   let errorArr = [];
-  let resultString;
-  
+
+  console.log(textState);
 
   //SUBMIT BUTTON PRESSED
   const checkConversion = () => {
+    let resolved;
     console.log(`output: ${output}`);
-    //SubmitButton activate correct conversion function 
-    morseToEnglish ? convertToEnglish() : convertToMorse();
-    return resultString;
+
+    //call correct conversion function 
+    if (morseToEnglish){
+      convertToEnglish();
+    } else {
+      setOutput(output + convertToMorse(textState));
+    }
   }
 
   //SWAP BUTTON PRESSED - reset
@@ -26,7 +31,7 @@ const Translator = () => {
     setOutput(output.slice(0, 0));
   }, [morseToEnglish])
 
-  //CONVERT TO ENGLISH 
+  // CONVERT TO ENGLISH 
   const convertToEnglish = () => {
     let resultArr = [];
     let reverseCode = {};
@@ -44,7 +49,6 @@ const Translator = () => {
       resultArr.push(reverseCode[i]) :
       errorArr.push(i);
     });
-    console.log(reverseCode);
 
     //error reject results, else send to Output
     errorArr.length===0 
@@ -53,26 +57,34 @@ const Translator = () => {
   }
 
   //CONVERT TO MORSE
-  const convertToMorse = () => {
+  const convertToMorse = (string) => {
     let resultArr = [];
-    errorArr = [];
+    let stringArr;
+    let errorArr = [];
+    let result;
     
-    //set to lower case, convert to array
-    const stringArr = textState.trim().toLowerCase().split("");
+    //set to lower case, remove multiple spaces
+    const cleanString = string.trim().toLowerCase().replace(/  +/, " ")
+    //convert to array
+    stringArr = cleanString.split("");
+    //push coverversion to new array
     stringArr.forEach((i) => {
       code[i] ?
       resultArr.push(code[i]) :
       errorArr.push(i);
     });
-    console.log(resultArr);
     
-    //error reject results, else send to Output
-    errorArr.length===0 
-    ? setOutput(output + resultArr.join(' ')) 
-    : setOutput(output + `Sorry, try without these: '${errorArr.join("' '")}'`);
-    
-    //append value to resultString
-    ;
+    // if error reject results, else send to Output
+    if (resultArr.length===0) {
+      console.log(`Error: string was empty`);
+      return `try typing something!`;
+    } else if (errorArr.length===0){ 
+      return resultArr.join(" ");
+    } else {
+      console.log(`error: input character ${result} was not valid`);
+      result = errorArr.join("' '");
+      return `Sorry, try without these: '${result}'`;
+    }
   }
 
   return (
@@ -88,7 +100,6 @@ const Translator = () => {
       <SpeechBubble
         id="grey"
         output={ output }
-        resultString={ resultString }
         morseToEnglish={ morseToEnglish }
         setMorseToEnglish={ setMorseToEnglish }
       />

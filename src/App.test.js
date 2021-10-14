@@ -35,7 +35,7 @@ describe("convertEnglish() should take string of English and convert to corrospo
     expect(convertEnglish("hello world. Bye.")).toBe(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. .-.-.- / -... -.-- ..-.-.-");
   });
 
-  it("Should throw an error if character has no known morese code equivalent", () => {
+  it("Should throw an error if character has no known morse code equivalent", () => {
     expect(() => convertEnglish("^")).toThrowError(specialCharacterError);
     expect(() => convertEnglish("[")).toThrowError(specialCharacterError);
   });
