@@ -1,0 +1,15 @@
+@import "./../../sassStyles/mediaQueries";
+@import "./../../sassStyles/mixins";
+
+.Translator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include height-width(auto, 50vw);
+  border: 1px solid red;
+
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+    @include height-width(auto, 90vw);
+  }
+}

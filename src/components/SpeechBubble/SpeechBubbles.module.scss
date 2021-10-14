@@ -1,0 +1,20 @@
+@import "./../../sassStyles/mediaQueries";
+@import "./../../sassStyles/palette";
+
+.SpeechBubbles {
+  width: 49%;
+  border: 1px solid yellow;
+
+  @include query-phone {
+    height: auto;
+    width: 100%;
+  }
+
+  &_active {
+    background-color: $orange;
+  }
+
+  &_disabled {
+    background-color: $grey;
+  }
+}

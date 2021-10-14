@@ -1,0 +1,12 @@
+@import "./../../sassStyles/variables";
+@import "./../../sassStyles/_mediaQueries";
+@import "./../../sassStyles/mixins";
+@import "./../../sassStyles/palette";
+
+.Title {
+  @include height-width(35px, 310px);
+  
+  @include query-phone {
+    @include height-width(auto, 55vw);
+  }
+}
