@@ -1,0 +1,44 @@
+@import "./../../sassStyles/mediaQueries";
+@import "./../../sassStyles/mixins";
+@import "./../../sassStyles/palette";
+
+.Button {
+
+  cursor: pointer;
+
+  &_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    @include query-phone {
+      margin: 5px;
+    }
+  }
+
+  &_side {
+
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+    @include height-width(24px, 24px);background-color: transparent;
+    border: none;
+  }
+
+  &_main {
+
+    cursor: pointer;
+    margin: 0px 10px;
+    padding: 0px;
+    @include height-width(40px, 40px);background-color: transparent;
+    border: none;
+
+    @include query-phone {
+      margin: 0px 20px;
+    }
+  }
+
+  &_disabled {
+    cursor: default;
+  }
+}

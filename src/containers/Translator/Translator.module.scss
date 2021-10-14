@@ -1,0 +1,20 @@
+@import "./../../sassStyles/mediaQueries";
+@import "./../../sassStyles/mixins";
+
+.Translator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include height-width(auto, auto);
+
+  @include query-tablet {
+    flex-direction: column;
+    @include height-width(60vh, 70vw);
+  }
+
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+    justify-content: space-between;
+    @include height-width(70vh, 85vw);
+  }
+} 

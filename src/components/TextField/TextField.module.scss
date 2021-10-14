@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import "./../../sassStyles/mediaQueries";
+@import "./../../sassStyles/palette";
+@import "./../../sassStyles/mixins";
+
+.TextArea {
+  box-sizing: border-box;
+  padding: 10px;
+  @include height-width(370px, 300px);
+  color: $white;
+  background-color: #BF6F35;
+  border: none;
+  border-radius: 8px;
+
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 1rem;
+
+  &:focus-visible {
+    border: none;
+    outline: none;
+  }
+
+  @include query-tablet {
+    margin: 0px;
+    @include height-width(100%, 100%);
+  }
+
+  @include query-phone {
+    margin: 0px;
+    @include height-width(100%, 100%);
+  }
+}
+
+textarea::-webkit-input-placeholder {
+  color: $offWhite;
+}
+textarea:-moz-placeholder { /* Firefox 18- */
+color: $offWhite;  
+} 
+textarea::-moz-placeholder {  /* Firefox 19+ */
+color: $offWhite;  
+}
+textarea:-ms-input-placeholder {
+color: $offWhite;  
+}

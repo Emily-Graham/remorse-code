@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import "./../../sassStyles/mediaQueries";
+@import "./../../sassStyles/palette";
+@import "./../../sassStyles/mixins";
+
+.Output {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 10px;
+  @include height-width(370px, 300px);
+  color: $white;
+  
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 1rem;
+
+  @include query-tablet {
+    margin: 0px;
+    @include height-width(100%, 100%);
+  }
+
+  @include query-phone {
+    margin: 0px;
+    @include height-width(100%, 100%);
+  }
+}

@@ -1,0 +1,13 @@
+@import "./variables";
+
+@mixin query-phone {
+  @media only screen and (max-width: $phone) {
+    @content;
+  }
+}
+
+@mixin query-tablet {
+  @media only screen and (min-width: $phone + 1) and (max-width: $tablet) {
+    @content;
+  }
+}
