@@ -1,11 +1,11 @@
 import styles from './Output.module.scss';
 
-const Output = () => {
+const Output = ( { morseToEnglish, resultString } ) => {
 
   //where conversion result is pushed to;
-  const resultArray = [];
+  const placeholder = morseToEnglish ? "Type your morse code message" : "- -.-- .--. . / -.-- --- ..- .-. / . -. --. .-.. .. ... .... / -- . ... ... .- --. . / .... . .-. .";
   //array converted to string
-  let output = resultArray.join(" ");
+  let output = resultString !== 'undefined' ? resultString : placeholder;
 
 
   return (

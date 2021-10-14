@@ -38,23 +38,23 @@ const code = [
   9: "----."
   },
   [
-  [{bracket_open: "("}, {bracket_open: "-.--."}],
-  [{bracket_close: ")"}, {bracket_close: "-.--.-"}],
-  [{ampersand: "&"}, {ampersand: ".-..."}],
-  [{apostrophe: "'"}, {apostrophe: ".----."}],
-  [{at: "@"}, {at: ".--.-."}],
-  [{colon: ":"}, {colon: "---..."}],
-  [{equals: "="}, {equals: "-...-"}],
-  [{exclaim: "!"}, {exclaim: "-.-.--"}],
-  [{question: "?"}, {question: "..--.."}],
-  [{fullStop: "."}, {fullStop: ".-.-.-"}],
-  [{comma: ","},{comma: "--..--"}]
-  [{hyphen: "-"}, {hyphen: "-....-"}],
-  [{plus: "+"}, {plus: ".-.-."}],
-  [{slash: "/"}, {slash: "-..-."}],
-  [{percent: ""}, {percent: "-..-."}],
-  [{multiply: "×"}, {multiply: "-..-"}]
-  [{quote: `""`}, {quote: ".-..-."}]
+    [{bracket_open: "("}, {bracket_open: "-.--."}],
+    [{bracket_close: ")"}, {bracket_close: "-.--.-"}],
+    [{ampersand: "&"}, {ampersand: ".-..."}],
+    [{apostrophe: "'"}, {apostrophe: ".----."}],
+    [{at: "@"}, {at: ".--.-."}],
+    [{colon: ":"}, {colon: "---..."}],
+    [{equals: "="}, {equals: "-...-"}],
+    [{exclaim: "!"}, {exclaim: "-.-.--"}],
+    [{question: "?"}, {question: "..--.."}],
+    [{fullStop: "."}, {fullStop: ".-.-.-"}],
+    [{comma: ","},{comma: "--..--"}],
+    [{hyphen: "-"}, {hyphen: "-....-"}],
+    [{plus: "+"}, {plus: ".-.-."}],
+    [{slash: "/"}, {slash: "-..-."}],
+    [{percent: ""}, {percent: "-..-."}],
+    [{multiply: "×"}, {multiply: "-..-"}],
+    [{quote: `""`}, {quote: ".-..-."}]
   ]
 ];
 

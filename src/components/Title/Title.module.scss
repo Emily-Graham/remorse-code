@@ -4,9 +4,11 @@
 @import "./../../sassStyles/palette";
 
 .Title {
+  margin: 0px 0px 50px 0px;
   @include height-width(35px, 310px);
   
   @include query-phone {
+    margin: 0px 0px 40px 0px;
     @include height-width(auto, 55vw);
   }
 }
