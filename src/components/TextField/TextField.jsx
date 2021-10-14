@@ -5,7 +5,6 @@ const TextField = ({ value, onChange, morseToEnglish }) => {
   //placeholder changes based on morseToEnglish true/false
   let placeholder = morseToEnglish ? "- -.-- .--. . / -.-- --- ..- .-. / . -. --. .-.. .. ... .... / -- . ... ... .- --. . / .... . .-. ." : "Type your English message here";
   
-  
   const handleChange = (event) => {
     onChange(event.target.value);
   }

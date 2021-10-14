@@ -1,16 +1,17 @@
 import styles from './Output.module.scss';
 
-const Output = ( { morseToEnglish, resultString } ) => {
+const Output = ( { output, morseToEnglish } ) => {
 
-  //where conversion result is pushed to;
+  let display = ``;
+  //display correct placeholder depending on morseToEnglish
   const placeholder = morseToEnglish ? "Type your morse code message" : "- -.-- .--. . / -.-- --- ..- .-. / . -. --. .-.. .. ... .... / -- . ... ... .- --. . / .... . .-. .";
-  //array converted to string
-  let output = resultString !== 'undefined' ? resultString : placeholder;
 
+  //display output
+  output ? display = output : display = placeholder;
 
   return (
     <p className={ styles.Output }>
-      { output }
+      { display }
     </p>
   )
 }
