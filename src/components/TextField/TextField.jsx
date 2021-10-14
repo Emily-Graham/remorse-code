@@ -6,7 +6,7 @@ const TextField = ({ value, onChange, placeholder="Enter text here" }) => {
   }
 
   return (
-    <textarea className={styles.TextArea} type="text" value={value} onChange={handleChange} ></textarea> 
+    <textarea className={styles.TextArea} type="text" rows="60" value={value} onChange={handleChange} ></textarea> 
   );
 }
 

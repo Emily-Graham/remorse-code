@@ -3,15 +3,11 @@
 @import "./../../sassStyles/palette";
 @import "./../../sassStyles/mixins";
 
-.TextArea {
+.Output {
   box-sizing: border-box;
   padding: 10px;
   @include height-width(370px, 300px);
   color: $white;
-  background-color: #BF6F35;
-  border: none;
-  border-radius: 8px;
-
   text-align: center;
   font-family: 'Montserrat Alternates', sans-serif;
 }

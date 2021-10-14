@@ -9,16 +9,18 @@ const Translator = () => {
   console.log( textState);
 
   return (
-    <div className={styles.Translator}>
+    <div className={ styles.Translator }>
       <SpeechBubble 
-        textState={textState} 
-        setTextState={setTextState}
-        morseToEnglish={morseToEnglish}
-        setMorseToEnglish={setMorseToEnglish}
+        id="orange"
+        textState={ textState } 
+        setTextState={ setTextState }
+        morseToEnglish={ morseToEnglish }
+        setMorseToEnglish={ setMorseToEnglish }
       />
-      <SpeechBubble 
-        morseToEnglish={morseToEnglish}
-        setMorseToEnglish={setMorseToEnglish}
+      <SpeechBubble
+        id="grey"
+        morseToEnglish={ morseToEnglish }
+        setMorseToEnglish={ setMorseToEnglish }
       />
     </div>
   )
