@@ -1,0 +1,103 @@
+@import "./../../sassStyles/mediaQueries";
+@import "./../../sassStyles/palette";
+@import "./../../sassStyles/mixins";
+
+.SpeechBubbles {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 30px 0px 30px;
+  @include height-width(460px, auto);
+  border-radius: 15px;
+
+  @include query-tablet {
+    padding: 20px 20px 0px 20px;
+    @include height-width(49%, 92%);
+  }
+
+  @include query-phone {
+    padding: 20px 20px 0px 20px;
+    @include height-width(49%, 100%);
+  }
+
+  &_active {
+    margin: 0px 15px 60px 0px;
+    background-color: $orange;
+
+    @include query-tablet {
+      margin: 0px;
+    }
+    @include query-phone {
+      margin: 0px;
+    }
+  }
+  &_disabled {
+    margin: 60px 0px 0px 0px;
+    background-color: $grey;
+
+    @include query-tablet {
+      margin: 0px 0px 0px 8%;
+    }
+    @include query-phone {
+      margin: 0px;
+    }
+  }
+
+  &_tail {
+    position: absolute;
+
+    &_grey {
+      left: -35px;
+      top: 90px;
+      @include query-tablet {
+        display: none;
+      }
+      @include query-phone {
+        display: none;
+      }
+      &_svg {
+        box-shadow: 0px 6px 4px rgba(96, 13, 13, 0.25);
+      }
+    } 
+
+    &_orange {
+      right: -35px;
+      bottom: 90px;
+      z-index: 2;
+      @include query-tablet {
+        display: none;
+      }
+      @include query-phone {
+        display: none;
+      }
+      &_svg {
+        box-shadow: 2px 6px 4px rgba(12, 12, 12, 0.25);
+      }
+    }
+
+    &_small {
+      position: absolute;
+      display: none;
+
+      @include query-tablet {
+        display: block;
+      }
+      @include query-phone {
+        display: block;
+      }
+      &_orange {
+        right: 50px;
+        bottom: -40px;
+        z-index: 2;
+      }
+      &_grey {
+        left: 50px;
+        top: -32px;
+        z-index: 0;
+      }
+    }
+  }
+}
