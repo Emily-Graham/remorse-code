@@ -6,15 +6,10 @@ import { useEffect } from "react";
 
 const Translator = () => {
   const [morseToEnglish, setMorseToEnglish] = useState(false);
-  const [submit, setSubmit ] = useState(false);
   const [textState, setTextState] = useState("");
   const [output, setOutput] = useState("");
 
   //SUBMIT BUTTON PRESSED
-
-
-
-
   const checkConversion = () => {
     //call correct conversion function 
     morseToEnglish 
@@ -24,8 +19,7 @@ const Translator = () => {
 
   //SWAP BUTTON PRESSED
   useEffect(() => {
-    setTextState("");
-    setOutput("");
+    resetText();
   }, [morseToEnglish])
 
   //RESET BUTTON PRESSED
