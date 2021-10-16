@@ -49,9 +49,11 @@ const SpeechBubbles = ({
 
   //render correct tail classes 
   id === "orange" 
-  ? tail_classes.push(styles.SpeechBubbles_tail_orange) : tail_classes.push(styles.SpeechBubbles_tail_grey);
+  ? tail_classes.push(styles.SpeechBubbles_tail_orange) 
+  : tail_classes.push(styles.SpeechBubbles_tail_grey);
   id === "orange" 
-  ? tail2_classes.push(styles.SpeechBubbles_tail_small_orange) : tail2_classes.push(styles.SpeechBubbles_tail_small_grey);
+  ? tail2_classes.push(styles.SpeechBubbles_tail_small_orange) 
+  : tail2_classes.push(styles.SpeechBubbles_tail_small_grey);
 
   return (
     <div id={id} className={classes.join(" ")}>

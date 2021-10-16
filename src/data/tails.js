@@ -11,11 +11,11 @@ export const tail_orange =
 export const tail_orange_small =
   <svg width="33" height="37" viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g filter="url(#filter0_d)">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 19.0627C15 22.5865 13.9589 25.9442 12.0754 29C22.4425 22.8612 29 13.7984 29 3.68922C29 2.76906 28.9457 1.85756 28.8391 0.956156L4.033 0.956154C10.8095 5.59201 15 11.993 15 19.0627Z" fill="#A54F1C"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M15 19.0627C15 22.5865 13.9589 25.9442 12.0754 29C22.4425 22.8612 29 13.7984 29 3.68922C29 2.76906 28.9457 1.85756 28.8391 0.956156L4.033 0.956154C10.8095 5.59201 15 11.993 15 19.0627Z" fill="#A54F1C"/>
   </g>
   <defs>
-  <filter id="filter0_d" x="0.0329895" y="0.956154" width="32.967" height="36.0438" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <filter id="filter0_d" x="0.0329895" y="0.956154" width="32.967" height="36.0438" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
   <feOffset dy="4"/>
   <feGaussianBlur stdDeviation="2"/>
@@ -30,11 +30,11 @@ export const tail_orange_small =
 export const tail_grey_small =
   <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g filter="url(#filter0_d)">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.033 13.8935C14.033 10.3696 15.0741 7.01193 16.9576 3.95615C6.59046 10.095 0.0329868 19.1577 0.0329851 29.2669C0.0329849 30.1871 0.0873136 31.0986 0.193899 32L25 32C18.2235 27.3641 14.033 20.9632 14.033 13.8935Z" fill="#473E3E"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M14.033 13.8935C14.033 10.3696 15.0741 7.01193 16.9576 3.95615C6.59046 10.095 0.0329868 19.1577 0.0329851 29.2669C0.0329849 30.1871 0.0873136 31.0986 0.193899 32L25 32C18.2235 27.3641 14.033 20.9632 14.033 13.8935Z" fill="#473E3E"/>
   </g>
   <defs>
-  <filter id="filter0_d" x="0.0329857" y="0.956146" width="30.967" height="32.0438" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <filter id="filter0_d" x="0.0329857" y="0.956146" width="30.967" height="32.0438" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
   <feOffset dx="4" dy="-1"/>
   <feGaussianBlur stdDeviation="1"/>
