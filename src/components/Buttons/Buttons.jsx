@@ -11,7 +11,7 @@ import {
   swap,
 } from "./../../data/svgButtons";
 
-const Buttons = ({ textState, setTextState, SpeechBubbleId, morseToEnglish, setMorseToEnglish, checkConversion }) => {
+const Buttons = ({ resetText, SpeechBubbleId, morseToEnglish, setMorseToEnglish, checkConversion }) => {
   let buttons;
   let sideButtons = [styles.Button_side];
   let mainButton = [styles.Button_main];
@@ -26,7 +26,7 @@ const Buttons = ({ textState, setTextState, SpeechBubbleId, morseToEnglish, setM
   SpeechBubbleId === "orange" 
     ? buttons = 
       <>
-        <button className={ sideButtons.join(" ") } onClick={ () => setTextState(textState.slice(0,0)) }>
+        <button className={ sideButtons.join(" ") } onClick={ resetText }>
           { reset }
         </button>
         <button className={ mainButton.join(" ") } onClick={ checkConversion }>
