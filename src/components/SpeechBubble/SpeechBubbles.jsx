@@ -12,6 +12,7 @@ const SpeechBubbles = ({
   setMorseToEnglish,
   checkConversion,
   output,
+  resetText
 }) => {
   const classes = [styles.SpeechBubbles];
   const tail_classes = [styles.SpeechBubbles_tail];
@@ -49,22 +50,25 @@ const SpeechBubbles = ({
 
   //render correct tail classes 
   id === "orange" 
-  ? tail_classes.push(styles.SpeechBubbles_tail_orange) : tail_classes.push(styles.SpeechBubbles_tail_grey);
+  ? tail_classes.push(styles.SpeechBubbles_tail_orange) 
+  : tail_classes.push(styles.SpeechBubbles_tail_grey);
   id === "orange" 
-  ? tail2_classes.push(styles.SpeechBubbles_tail_small_orange) : tail2_classes.push(styles.SpeechBubbles_tail_small_grey);
+  ? tail2_classes.push(styles.SpeechBubbles_tail_small_orange) 
+  : tail2_classes.push(styles.SpeechBubbles_tail_small_grey);
 
   return (
-    <div id={id} className={classes.join(" ")}>
+    <div id={id} className={ classes.join(" ") }>
       <div className={ tail_classes.join(" ") }>{ tail }</div>
       <div className={ tail2_classes.join(" ") }>{ tail2 }</div>
       {textbox}
       <Buttons
-        SpeechBubbleId={id}
-        morseToEnglish={morseToEnglish}
-        setMorseToEnglish={setMorseToEnglish}
-        textState={textState}
-        setTextState={setTextState}
-        checkConversion={checkConversion}
+        SpeechBubbleId={ id }
+        morseToEnglish={ morseToEnglish }
+        setMorseToEnglish={ setMorseToEnglish }
+        textState={ textState }
+        setTextState={ setTextState }
+        checkConversion={ checkConversion }
+        resetText = { resetText }
       />
     </div>
   );
