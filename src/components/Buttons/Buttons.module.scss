@@ -3,42 +3,46 @@
 @import "./../../sassStyles/palette";
 
 .Button {
-
   cursor: pointer;
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    transform: scale(1.5, 1.5);
+  }
+
+  &:enabled {
+    transition: all 0.25s ease-in-out;
+  }
+
+  &:disabled {
+    transition: none;
+    transform: scale(1, 1);
+    cursor: auto;
+  }
 
   &_container {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    padding: 10px;
+    @include height-width(50px, 130px);
     @include query-phone {
       margin: 5px;
     }
   }
 
   &_side {
-
-    cursor: pointer;
-    padding: 0px;
-    margin: 0px;
-    @include height-width(24px, 24px);background-color: transparent;
-    border: none;
+    @include height-width(24px, 24px);
   }
 
   &_main {
-
-    cursor: pointer;
-    margin: 0px 10px;
-    padding: 0px;
-    @include height-width(40px, 40px);background-color: transparent;
-    border: none;
+    @include height-width(40px, 40px);
 
     @include query-phone {
       margin: 0px 20px;
     }
-  }
-
-  &_disabled {
-    cursor: default;
   }
 }
